@@ -141,7 +141,7 @@
 <a href="contact.html" class="bg-[#F97316] text-white px-6 py-2.5 rounded-lg font-button shadow-md hover:scale-[1.02] active:scale-95 transition-all order-3">Contact</a>
 </nav>
 
-<!-- Menu Mobile -->
+<!-- Menu Mobile (caché par défaut) -->
 <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 py-4 px-8 flex flex-col gap-4 shadow-lg">
 <a href="services.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] hover:text-[#F97316] transition-colors py-2">Services</a>
 <a href="portfolio.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] hover:text-[#F97316] transition-colors py-2">Portfolio</a>
@@ -221,7 +221,7 @@
 </div>
 </section>
 
-
+<!-- Portfolio avec images réelles - sans bouton "Voir tous nos projets" -->
 <section id="portfolio" class="bg-white py-xl scroll-mt-24">
 <div class="max-w-[1280px] mx-auto px-8">
 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"><div><h2 class="font-h2 text-h2 text-[#1E3A5F] mb-4">Nos Réalisations</h2><p class="text-slate-500 max-w-xl">Aperçu des projets récents.</p></div></div>
@@ -310,7 +310,7 @@ if (mobileExpertiseBtn && mobileExpertiseMenu) {
     });
 }
 
-// Ancres fluides 
+// Ancres fluides (seulement pour les ancres internes)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));
