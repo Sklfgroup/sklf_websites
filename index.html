@@ -1,329 +1,365 @@
 <!DOCTYPE html>
-<html class="light" lang="fr">
+<html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Informatis-web | Accueil - Expertise digitale depuis 1971</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary": "#202428",
-                    "on-surface-variant": "#43474e",
-                    "on-tertiary-container": "#9fa4a7",
-                    "inverse-on-surface": "#ecf1ff",
-                    "primary-container": "#1e3a5f",
-                    "surface": "#f9f9ff",
-                    "surface-container-high": "#dee8ff",
-                    "on-primary": "#ffffff",
-                    "surface-container-highest": "#d8e3fb",
-                    "error": "#ba1a1a",
-                    "secondary-fixed-dim": "#ffb690",
-                    "surface-bright": "#f9f9ff",
-                    "surface-container-low": "#f0f3ff",
-                    "on-secondary-fixed-variant": "#783200",
-                    "inverse-primary": "#adc8f5",
-                    "outline": "#74777f",
-                    "on-error-container": "#93000a",
-                    "surface-variant": "#d8e3fb",
-                    "on-surface": "#111c2d",
-                    "secondary-fixed": "#ffdbca",
-                    "on-secondary-container": "#5c2400",
-                    "surface-tint": "#455f87",
-                    "secondary-container": "#fd761a",
-                    "inverse-surface": "#263143",
-                    "primary": "#022448",
-                    "tertiary-fixed": "#dfe3e7",
-                    "primary-fixed": "#d5e3ff",
-                    "on-background": "#111c2d",
-                    "outline-variant": "#c4c6cf",
-                    "tertiary-container": "#353a3d",
-                    "surface-dim": "#cfdaf2",
-                    "on-primary-fixed": "#001c3b",
-                    "primary-fixed-dim": "#adc8f5",
-                    "on-tertiary-fixed-variant": "#43474b",
-                    "on-error": "#ffffff",
-                    "surface-container": "#e7eeff",
-                    "background": "#f9f9ff",
-                    "on-tertiary": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "on-primary-container": "#8aa4cf",
-                    "secondary": "#9d4300",
-                    "tertiary-fixed-dim": "#c3c7cb",
-                    "on-secondary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-fixed-variant": "#2d486d",
-                    "on-tertiary-fixed": "#171c1f",
-                    "on-secondary-fixed": "#341100"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "xs": "4px",
-                    "base": "8px",
-                    "xl": "80px",
-                    "sm": "12px",
-                    "lg": "48px",
-                    "container-max": "1280px",
-                    "gutter": "24px",
-                    "md": "24px"
-            },
-            "fontFamily": {
-                    "body-md": ["Inter"],
-                    "button": ["Inter"],
-                    "h3": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "h1": ["Inter"],
-                    "h2": ["Inter"],
-                    "label-sm": ["Inter"]
-            },
-            "fontSize": {
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
-                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        body { font-family: 'Inter', sans-serif; }
-        html { scroll-behavior: smooth; }
-        .scroll-mt-24 { scroll-margin-top: 100px; }
-        .no-scroll { overflow: hidden; }
-    </style>
-</head>
-<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-white">
-
-<!-- ==================== HEADER AVEC TOUS LES LIENS ==================== -->
-<header class="bg-white border-b border-slate-100 shadow-[0px_4px_20px_rgba(30,58,95,0.08)] sticky top-0 z-50">
-<nav class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto w-full">
-<!-- Bouton hamburger pour mobile - POSITIONNÉ À GAUCHE -->
-<button id="menuBtn" class="md:hidden text-[#1E3A5F] focus:outline-none order-1">
-    <span class="material-symbols-outlined">menu</span>
-</button>
-
-<a href="index.html" class="text-xl font-bold text-[#1E3A5F] tracking-tighter hover:text-[#F97316] transition-colors order-2 md:order-1">Informatis-web</a>
-
-<!-- Menu Desktop -->
-<div class="hidden md:flex items-center gap-8 order-2">
-<a href="services.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] opacity-80 hover:opacity-100 hover:text-[#F97316] transition-colors">Services</a>
-<a href="portfolio.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] opacity-80 hover:opacity-100 hover:text-[#F97316] transition-colors">Portfolio</a>
-<div class="relative group">
-<a href="#" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] opacity-80 hover:opacity-100 hover:text-[#F97316] transition-colors flex items-center gap-1">Expertise <span class="material-symbols-outlined text-base">expand_more</span></a>
-<div class="absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 border border-slate-100">
-<a href="expertise/hebergement.html" class="block px-4 py-3 text-sm text-[#1E3A5F] hover:bg-[#F1F5F9] hover:text-[#F97316] transition-colors"><span class="material-symbols-outlined text-base mr-2">cloud</span> Hébergement & Domaines</a>
-<a href="expertise/seo.html" class="block px-4 py-3 text-sm text-[#1E3A5F] hover:bg-[#F1F5F9] hover:text-[#F97316] transition-colors"><span class="material-symbols-outlined text-base mr-2">trending_up</span> SEO & SEA</a>
-</div>
-</div>
-<a href="tarifs.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] opacity-80 hover:opacity-100 hover:text-[#F97316] transition-colors">Tarifs</a>
-<a href="blog.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] opacity-80 hover:opacity-100 hover:text-[#F97316] transition-colors">Blog</a>
-</div>
-
-<a href="contact.html" class="bg-[#F97316] text-white px-6 py-2.5 rounded-lg font-button shadow-md hover:scale-[1.02] active:scale-95 transition-all order-3">Contact</a>
-</nav>
-
-<!-- Menu Mobile -->
-<div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 py-4 px-8 flex flex-col gap-4 shadow-lg">
-<a href="services.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] hover:text-[#F97316] transition-colors py-2">Services</a>
-<a href="portfolio.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] hover:text-[#F97316] transition-colors py-2">Portfolio</a>
-<div class="relative">
-<button id="mobileExpertiseBtn" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] hover:text-[#F97316] transition-colors py-2 flex items-center gap-1 w-full text-left">Expertise <span class="material-symbols-outlined text-base">expand_more</span></button>
-<div id="mobileExpertiseMenu" class="hidden pl-4 flex flex-col gap-2 mt-1">
-<a href="expertise/hebergement.html" class="block py-2 text-sm text-[#1E3A5F] hover:text-[#F97316] transition-colors"><span class="material-symbols-outlined text-base mr-2 align-middle">cloud</span> Hébergement & Domaines</a>
-<a href="expertise/seo.html" class="block py-2 text-sm text-[#1E3A5F] hover:text-[#F97316] transition-colors"><span class="material-symbols-outlined text-base mr-2 align-middle">trending_up</span> SEO & SEA</a>
-</div>
-</div>
-<a href="tarifs.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] hover:text-[#F97316] transition-colors py-2">Tarifs</a>
-<a href="blog.html" class="font-semibold text-sm uppercase tracking-wider text-[#1E3A5F] hover:text-[#F97316] transition-colors py-2">Blog</a>
-<a href="contact.html" class="bg-[#F97316] text-white px-4 py-2 rounded-lg font-button text-center hover:bg-[#EA580C] transition-all">Contact</a>
-</div>
-</header>
-
-<main>
-<!-- Hero Section -->
-<section class="bg-[#1E3A5F] py-xl overflow-hidden relative">
-<div class="max-w-[1280px] mx-auto px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-<div>
-<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container/20 text-[#F97316] font-label-sm text-label-sm mb-6">Expertise Historique</span>
-<h1 class="font-h1 text-h1 text-white mb-6 leading-tight">Votre présence digitale, pensée par des experts depuis 1971</h1>
-<p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">Plus de 50 ans d'accompagnement en ingénierie digitale. Nous fusionnons rigueur technique et créativité agile pour propulser votre entreprise.</p>
-<div class="flex flex-wrap gap-4">
-<a href="demande-etude.html" class="bg-[#F97316] text-white px-8 py-4 rounded-lg font-button hover:bg-[#EA580C] transition-colors shadow-lg">Demander une étude gratuite</a>
-<a href="portfolio.html" class="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-button hover:bg-white/10 transition-colors">Voir nos réalisations</a>
-</div>
-</div>
-<div class="relative hidden md:block">
-<div class="absolute inset-0 rounded-xl overflow-hidden z-0">
-    <img src="images/21.jpg" alt="Expertise Digital" class="w-full h-full object-cover"/>
-</div>
-<div class="rounded-xl overflow-hidden shadow-2xl transform rotate-2 relative z-10 bg-black/20">
-    <img alt="Bureau Digital Expertise" class="w-full h-auto object-cover opacity-0" src="https://placehold.co/600x400/1E3A5F/white?text=Expertise+Digital"/>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl flex items-center gap-4 z-20"><div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-[#F97316]"><span class="material-symbols-outlined">trending_up</span></div><div><div class="font-bold text-[#1E3A5F]">Top Performance</div><div class="text-xs text-slate-500">Optimisation SEO &amp; SEA</div></div></div>
-</div>
-</div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="bg-[#F1F5F9] py-xl scroll-mt-24">
-<div class="max-w-[1280px] mx-auto px-8">
-<div class="text-center mb-16"><h2 class="font-h2 text-h2 text-[#1E3A5F] mb-4">Nos Domaines d'Expertise</h2><p class="font-body-md text-body-md text-slate-600 max-w-2xl mx-auto">Un accompagnement complet de l'idée à la mise en ligne, avec des solutions technologiques robustes et évolutives.</p></div>
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-<div class="md:col-span-2 md:row-span-2 bg-white p-8 rounded-lg shadow hover:shadow-lg transition-all group"><div><div class="w-14 h-14 rounded-full bg-[#1E3A5F]/10 flex items-center justify-center text-[#1E3A5F] mb-6 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">insights</span></div><h3 class="font-h3 text-h3 text-[#1E3A5F] mb-4">Conseil &amp; Stratégie</h3><p class="font-body-md text-body-md text-slate-600">Audit technique, étude de faisabilité et définition de votre feuille de route digitale pour un ROI optimal.</p></div><div class="mt-8"><a href="approche.html" class="text-[#F97316] font-semibold flex items-center gap-2">Découvrir l'approche <span class="material-symbols-outlined text-sm">arrow_forward</span></a></div></div>
-<a href="expertise/seo.html" class="bg-white p-6 rounded-lg shadow hover:translate-y-[-4px] transition-all block"><span class="material-symbols-outlined text-[#F97316] mb-4">search_check</span><h4 class="font-h3 text-lg text-[#1E3A5F] mb-2">SEO / SEA</h4><p class="text-sm text-slate-500">Visibilité maximale sur les moteurs de recherche.</p></a>
-<a href="expertise/hebergement.html" class="bg-white p-6 rounded-lg shadow hover:translate-y-[-4px] transition-all block"><span class="material-symbols-outlined text-[#F97316] mb-4">cloud_done</span><h4 class="font-h3 text-lg text-[#1E3A5F] mb-2">Hébergement</h4><p class="text-sm text-slate-500">Solutions Cloud sécurisées en France.</p></a>
-<div class="bg-white p-6 rounded-lg shadow"><span class="material-symbols-outlined text-[#F97316] mb-4">code</span><h4 class="font-h3 text-lg text-[#1E3A5F] mb-2">Développement</h4><p class="text-sm text-slate-500">Applications sur-mesure.</p></div>
-<div class="bg-white p-6 rounded-lg shadow"><span class="material-symbols-outlined text-[#F97316] mb-4">support_agent</span><h4 class="font-h3 text-lg text-[#1E3A5F] mb-2">Accompagnement</h4><p class="text-sm text-slate-500">Support permanent.</p></div>
-<div class="bg-white p-6 rounded-lg shadow"><span class="material-symbols-outlined text-[#F97316] mb-4">database</span><h4 class="font-h3 text-lg text-[#1E3A5F] mb-2">Bases de données</h4><p class="text-sm text-slate-500">Modélisation de données complexes.</p></div>
-<div class="md:col-span-2 bg-white p-8 rounded-lg shadow flex gap-6 items-start"><div class="w-16 h-16 shrink-0 rounded-lg bg-orange-100 flex items-center justify-center text-[#F97316]"><span class="material-symbols-outlined text-3xl">shopping_cart</span></div><div><h3 class="font-h3 text-h3 text-[#1E3A5F] mb-2">E-commerce</h3><p class="font-body-md text-body-md text-slate-600">Boutiques en ligne optimisées pour la conversion.</p></div></div>
-<div class="bg-white p-6 rounded-lg shadow"><span class="material-symbols-outlined text-[#F97316] mb-4">language</span><h4 class="font-h3 text-lg text-[#1E3A5F] mb-2">Noms de domaine</h4><p class="text-sm text-slate-500">Gestion de votre identité.</p></div>
-</div>
-</div>
-</section>
-
-<!-- Offre Spéciale / Tarifs avec bouton PayPal -->
-<section id="tarifs" class="bg-[#1E3A5F] py-lg scroll-mt-24">
-<div class="max-w-[1280px] mx-auto px-8">
-<div class="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-<div class="text-center md:text-left"><span class="inline-block bg-[#F97316] text-white font-bold text-sm px-4 py-1 rounded-full mb-4">Offre Spéciale</span><h2 class="text-white font-h2 text-h2 mb-2">Pack Vitrine Essentiel</h2><p class="text-white/70 text-body-lg">Votre site professionnel clé en main.</p></div>
-<div class="flex flex-col items-center">
-<div class="text-white mb-2">à partir de</div>
-<div class="flex items-baseline gap-2">
-<span class="text-white font-black text-5xl">24,90 €</span>
-<span class="text-white/60">/ mois</span>
-</div>
-<a href="offre.html" class="mt-6 bg-white text-[#1E3A5F] px-8 py-3 rounded-lg font-button hover:bg-[#F97316] hover:text-white transition-all">En savoir plus</a>
-<!-- Bouton PayPal -->
-<div class="mt-4 w-full max-w-xs">
-    <div id="paypal-button-container" class="w-full"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<section id="portfolio" class="bg-white py-xl scroll-mt-24">
-<div class="max-w-[1280px] mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"><div><h2 class="font-h2 text-h2 text-[#1E3A5F] mb-4">Nos Réalisations</h2><p class="text-slate-500 max-w-xl">Aperçu des projets récents.</p></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="group cursor-pointer"><div class="relative overflow-hidden rounded-lg mb-4 aspect-[4/3]"><img alt="Informatis-TS - Solution logicielle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"/><div class="absolute inset-0 bg-[#1E3A5F]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><span class="text-white font-semibold">Voir le projet</span></div></div><h3 class="font-h3 text-xl text-[#1E3A5F]">Informatis-TS</h3><p class="text-sm text-slate-500 uppercase tracking-wider">Solution Logicielle</p></div>
-<div class="group cursor-pointer"><div class="relative overflow-hidden rounded-lg mb-4 aspect-[4/3]"><img alt="Café-spectacle - Plateforme événementielle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop"/><div class="absolute inset-0 bg-[#1E3A5F]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><span class="text-white font-semibold">Voir le projet</span></div></div><h3 class="font-h3 text-xl text-[#1E3A5F]">Café-spectacle</h3><p class="text-sm text-slate-500 uppercase tracking-wider">Événementiel</p></div>
-<div class="group cursor-pointer"><div class="relative overflow-hidden rounded-lg mb-4 aspect-[4/3]"><img alt="Internis Média - Agence digitale" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop"/><div class="absolute inset-0 bg-[#1E3A5F]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><span class="text-white font-semibold">Voir le projet</span></div></div><h3 class="font-h3 text-xl text-[#1E3A5F]">Internis Média</h3><p class="text-sm text-slate-500 uppercase tracking-wider">Agence Digitale</p></div>
-</div>
-</div>
-</section>
-
-<!-- Contact Section -->
-<section class="bg-[#F1F5F9] py-xl">
-<div class="max-w-[1280px] mx-auto px-8">
-<div class="grid lg:grid-cols-2 gap-16 items-start">
-<div><h2 class="font-h2 text-h2 text-[#1E3A5F] mb-6">Parlons de votre futur projet</h2><p class="font-body-lg text-body-lg text-slate-600 mb-8">Notre équipe d'experts est à votre disposition pour analyser vos besoins.</p>
-<div class="space-y-6"><div class="flex items-center gap-6"><div class="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-[#F97316]"><span class="material-symbols-outlined text-3xl">call</span></div><div><p class="text-sm text-slate-500">Par téléphone</p><a href="tel:0143379922" class="text-3xl font-bold text-[#1E3A5F] hover:text-[#F97316] transition-colors">01 43 37 99 22</a></div></div>
-<div class="flex items-center gap-6"><div class="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-[#F97316]"><span class="material-symbols-outlined text-3xl">mail</span></div><div><p class="text-sm text-slate-500">Par e-mail</p><a href="mailto:contact@informatis-web.com" class="text-xl font-bold text-[#1E3A5F] hover:text-[#F97316] transition-colors">contact@informatis-web.com</a></div></div></div>
-<div class="mt-12 p-8 bg-[#1E3A5F] rounded-lg text-white"><h4 class="font-h3 text-lg mb-4">Siège Social</h4><p class="text-white/80 leading-relaxed">128 Rue La Boétie<br/>75008 Paris, France</p></div></div>
-<div class="bg-white p-8 md:p-10 rounded-xl shadow-xl"><form action="contact.html" method="get" class="space-y-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label class="text-sm font-semibold text-slate-700">Civilité</label><select class="w-full bg-[#F1F5F9] border-transparent rounded-lg p-3"><option>M.</option><option>Mme</option></select></div><div><label class="text-sm font-semibold text-slate-700">Nom & Prénom</label><input class="w-full bg-[#F1F5F9] border-transparent rounded-lg p-3" placeholder="Jean Dupont" type="text"/></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label class="text-sm font-semibold text-slate-700">Entreprise</label><input class="w-full bg-[#F1F5F9] border-transparent rounded-lg p-3" placeholder="Votre société" type="text"/></div><div><label class="text-sm font-semibold text-slate-700">Email</label><input class="w-full bg-[#F1F5F9] border-transparent rounded-lg p-3" placeholder="jean@entreprise.com" type="email"/></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label class="text-sm font-semibold text-slate-700">Téléphone</label><input class="w-full bg-[#F1F5F9] border-transparent rounded-lg p-3" placeholder="06 00 00 00 00" type="tel"/></div><div><label class="text-sm font-semibold text-slate-700">Ville</label><input class="w-full bg-[#F1F5F9] border-transparent rounded-lg p-3" placeholder="Paris" type="text"/></div></div>
-<div><label class="text-sm font-semibold text-slate-700">Description du projet</label><textarea class="w-full bg-[#F1F5F9] border-transparent rounded-lg p-3" placeholder="Dites-nous en plus sur vos besoins..." rows="4"></textarea></div>
-<div class="flex items-center gap-3"><input class="w-5 h-5 rounded border-slate-300 text-[#F97316]" id="newsletter" type="checkbox"/><label class="text-sm text-slate-600" for="newsletter">S'abonner à la newsletter</label></div>
-<button class="w-full bg-[#F97316] text-white py-4 rounded-lg font-button hover:bg-[#EA580C] transition-all" type="submit">Envoyer ma demande</button></form></div>
-</div>
-</div>
-</section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-[#1E3A5F] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="text-lg font-black text-white">Informatis-web</div>
-<div class="flex flex-wrap justify-center gap-6"><a href="#" class="text-sm text-white/80 hover:text-[#F97316] transition-all">Mentions Légales</a><a href="#" class="text-sm text-white/80 hover:text-[#F97316] transition-all">CGV</a><a href="#" class="text-sm text-white/80 hover:text-[#F97316] transition-all">Politique de Confidentialité</a><a href="#" class="text-sm text-white/80 hover:text-[#F97316] transition-all">Recrutement</a></div>
-<div class="text-sm text-white/80 text-center md:text-right">© 2026 Informatis-web. Tous droits réservés.</div>
-</footer>
-
-<script>
-// Script PayPal
-paypal.Buttons({
-    style: {
-        color: 'gold',
-        shape: 'rect',
-        label: 'paypal',
-        height: 40
-    },
-    createOrder: function(data, actions) {
-        return actions.order.create({
-            purchase_units: [{
-                amount: {
-                    value: '24.90'
-                },
-                description: 'Pack Vitrine Essentiel - Informatis-web'
-            }]
-        });
-    },
-    onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-            alert('Paiement effectué avec succès ! Merci ' + details.payer.name.given_name);
-            window.location.href = 'merci.html';
-        });
-    },
-    onError: function(err) {
-        console.error('Erreur PayPal:', err);
-        alert('Une erreur est survenue. Veuillez réessayer.');
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKLF | Designs de sites web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-muted: #edf2f7;
+      --text: #172033;
+      --muted: #5f6b7a;
+      --line: #d9e1ea;
+      --primary: #0a4b78;
+      --primary-dark: #073957;
+      --accent: #e76f2c;
+      --shadow: 0 18px 45px rgba(23, 32, 51, 0.1);
     }
-}).render('#paypal-button-container');
 
-// Menu hamburger pour mobile
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+    * {
+      box-sizing: border-box;
+    }
 
-if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-    });
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(10, 75, 120, 0.12), transparent 34rem),
+        linear-gradient(135deg, #f9fbfd 0%, var(--bg) 48%, #eef4f8 100%);
+      color: var(--text);
+    }
 
-// Sous-menu Expertise dans le menu mobile
-const mobileExpertiseBtn = document.getElementById('mobileExpertiseBtn');
-const mobileExpertiseMenu = document.getElementById('mobileExpertiseMenu');
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-if (mobileExpertiseBtn && mobileExpertiseMenu) {
-    mobileExpertiseBtn.addEventListener('click', function() {
-        mobileExpertiseMenu.classList.toggle('hidden');
-    });
-}
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 56px;
+    }
 
-// Ancres fluides 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) { 
-            e.preventDefault(); 
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Fermer le menu mobile après clic sur un lien
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-        }
-    });
-});
-</script>
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 54px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.45fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0 0 18px;
+      font-size: clamp(36px, 7vw, 76px);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .summary {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.76);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .summary-value {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .summary-label {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 0 0 18px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 18px;
+    }
+
+    .design-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 12px 30px rgba(23, 32, 51, 0.08);
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .design-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(10, 75, 120, 0.35);
+      box-shadow: 0 18px 44px rgba(23, 32, 51, 0.13);
+    }
+
+    .preview {
+      min-height: 116px;
+      background:
+        linear-gradient(135deg, rgba(2, 36, 72, 0.92), rgba(10, 75, 120, 0.78)),
+        linear-gradient(90deg, var(--accent) 0 28%, transparent 28% 100%);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+
+    .preview::before,
+    .preview::after {
+      content: "";
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+    }
+
+    .preview::before {
+      top: 34px;
+      width: 42%;
+      height: 12px;
+    }
+
+    .preview::after {
+      top: 58px;
+      width: 68%;
+      height: 8px;
+      opacity: 0.62;
+    }
+
+    .design-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 22px;
+    }
+
+    .tag {
+      width: fit-content;
+      margin-bottom: 14px;
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: var(--surface-muted);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .design-body h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .design-body p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .filename {
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      background: var(--primary-dark);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 24px, 1120px);
+        padding-top: 24px;
+      }
+
+      .topbar,
+      .hero,
+      .section-title {
+        align-items: start;
+        grid-template-columns: 1fr;
+      }
+
+      .topbar,
+      .section-title {
+        flex-direction: column;
+      }
+
+      .topbar {
+        padding-bottom: 40px;
+      }
+
+      .status {
+        width: 100%;
+      }
+
+      .actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar" aria-label="En-tete">
+      <a class="brand" href="./" aria-label="Retour a l'index SKLF">
+        <span class="brand-mark">SKLF</span>
+        <span>Designs web</span>
+      </a>
+      <span class="status"><span class="status-dot" aria-hidden="true"></span>Catalogue de propositions</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">Liste des designs de sites SKLF</h1>
+        <p class="intro">
+          Cette page sert d'index pour consulter rapidement les propositions de sites web disponibles dans ce depot.
+        </p>
+      </div>
+      <aside class="summary" aria-label="Resume du catalogue">
+        <span class="summary-value">1</span>
+        <span class="summary-label">design disponible pour le moment. Les prochains sites pourront etre ajoutes ici avec leur lien.</span>
+      </aside>
+    </section>
+
+    <section aria-labelledby="designs-title">
+      <div class="section-title">
+        <h2 id="designs-title">Sites disponibles</h2>
+        <p>Ouvrir chaque proposition dans une page separee.</p>
+      </div>
+
+      <div class="design-grid">
+        <article class="design-card">
+          <div class="preview" aria-hidden="true"></div>
+          <div class="design-body">
+            <span class="tag">Design client</span>
+            <h3>Informatis</h3>
+            <p>Proposition de page d'accueil pour Informatis-web, expertise digitale depuis 1971.</p>
+            <div class="actions">
+              <span class="filename">informatis.html</span>
+              <a class="button" href="informatis.html">Voir le design</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
